@@ -1,0 +1,5 @@
+El plugin mas completo que integra html, php mysql de una manera facil y que permite hacer multicell es 
+
+mPDF
+
+Este uso para los reportes.

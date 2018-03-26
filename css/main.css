@@ -1,0 +1,291 @@
+body{
+	font-family: 'Lato', sans-serif;
+}
+img{
+	max-width: 60%;
+}
+.quitar-float{
+	float: none;
+}
+.espacio-arriba{
+	margin-top: 10%;
+
+}
+
+.espacio-arriba1{
+	margin-top: 1%;
+}
+.espacio-derecha{
+	margin-right: 1.5em;
+
+}
+
+.se-gris{
+	background-color: #eee;
+}
+.se-beige{
+	background-color: #BBE5AB; 
+}
+.padding-largo{
+	padding: 5px 10px;
+}
+
+.padding-largo2{
+	padding: 5px 600px;
+}
+
+.link-verde{
+	color: #45BF55;
+}
+
+.no-lista li{
+	list-style-type: none;
+
+}
+.inline-block{
+	float: none;
+	display: inline-block;
+	margin-right: -4px;
+}
+.grande{
+	font-size: 4m;
+}
+.retraso-animacion1{
+	-webkit-animation-delay: 0.8s;
+	-moz-animation-delay: 0.8s;
+	animation-delay: 0.8s;
+}
+.retraso-animacion2{
+	-webkit-animation-delay: 1s;
+	-moz-animation-delay: 1s;
+	animation-delay: 1s;
+}
+.espacio-izquierda{
+
+	margin-left: 1.5em;
+}
+.ibody{
+	background-color: #FFFFFF;
+	width: 500px;
+}
+.ibodybanda{
+	background-color: #00C003;
+	height: 33px;
+	width: 470px;
+}
+
+
+#inputs{
+	width: 250px; 
+	display: inline;
+}
+#enviar{
+	display: inline;
+}
+input {
+    border: solid 1px #ccc;
+    padding: 10px;
+    margin-bottom: 5px;
+    background: none;
+}
+.add{
+	padding: 8px;
+	background: none;
+	font-size: 1em;
+	color: #ddd;	
+	border:solid 1px #ddd;
+	outline: none;
+	margin-right: 5px;
+}
+.box {
+    margin-bottom: 15px;
+         padding: 16px 7px;
+        border:solid 2px #ddd;
+        /*background-color: #FFFFFF;*/
+        /*background: #fff;*/
+        background:  rgba(194,192,194,1);
+
+}
+.linea-division {
+    /*margin: 15px auto 3px;*/
+    max-width: 480px;
+    border-color: #999999;
+}
+.pie-pagina{
+	   /*padding-top: 100px;*/
+	  /*padding-bottom: 100px;*/
+	  
+	  
+	  /*text-align: center;*/
+	  background-color: #333;
+    color: #99979c;
+    margin-top: 50px;
+    float: left;
+    width: 100%;
+    padding: 60px;
+    display: block;
+    box-sizing: border-box;
+    text-decoration: none !important;
+    outline: 0 !important;
+}
+.link-footer{
+  color:#99979c;
+}
+/*Asi selecciono del footer, la 3 columna el atributo a y le coloco un color blanco*/
+footer .col-md-4:nth-child(3) a {
+    color: white;
+}
+footer .col-md-4:nth-child(2) strong {
+    color: white;
+}
+
+.bs-example {
+  position: relative;
+   padding: 25px 15px 15px;
+   margin: 0 -15px 15px;
+   /*border:solid 2px #ddd;*/
+   /*border-color: #e5e5e5 #eee #eee;
+   border-style: solid;
+   border-width: 1px 0;*/
+  /* -webkit-box-shadow: inset 0 3px 6px rgba(0,0,0,.05);
+           box-shadow: inset 0 3px 6px rgba(0,0,0,.05);*/
+}
+.w3-example{
+	background-color:#f1f1f1;
+	padding:0.01em 16px;
+}
+
+/* Popup container - can be anything you want */
+.popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+/*----------------------------------------------------------------------------------------------------------------
+/*CSS DE LOS POPUP
+/* The actual popup */
+.popup .popuptext {
+    visibility: hidden;
+    width: 160px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -80px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+}
+/*------------------------------------------------------------------------------------------------------------*/
+.seccion{
+    margin-right: 2%;
+    margin-left: 2%;
+}
+
+#div1 {
+     overflow:scroll;
+     height:600px;
+     width:100%;
+}
+#div1 table {
+    width:100%;
+    background-color:lightgray;
+}
+
+/* CSS used here will be applied after bootstrap.css */
+.modal-header-success {
+    color:#fff;
+    padding:9px 15px;
+    border-bottom:1px solid #eee;
+    background-color: #5cb85c;
+    -webkit-border-top-left-radius: 5px;
+    -webkit-border-top-right-radius: 5px;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-topright: 5px;
+     border-top-left-radius: 5px;
+     border-top-right-radius: 5px;
+}
+.modal-header-warning {
+    color:#fff;
+    padding:9px 15px;
+    border-bottom:1px solid #eee;
+    background-color: #f0ad4e;
+    -webkit-border-top-left-radius: 5px;
+    -webkit-border-top-right-radius: 5px;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-topright: 5px;
+     border-top-left-radius: 5px;
+     border-top-right-radius: 5px;
+}
+.modal-header-danger {
+    color:#fff;
+    padding:9px 15px;
+    border-bottom:1px solid #eee;
+    background-color: #d9534f;
+    -webkit-border-top-left-radius: 5px;
+    -webkit-border-top-right-radius: 5px;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-topright: 5px;
+     border-top-left-radius: 5px;
+     border-top-right-radius: 5px;
+}
+.modal-header-info {
+    color:#fff;
+    padding:9px 15px;
+    border-bottom:1px solid #eee;
+    background-color: #5bc0de;
+    -webkit-border-top-left-radius: 5px;
+    -webkit-border-top-right-radius: 5px;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-topright: 5px;
+     border-top-left-radius: 5px;
+     border-top-right-radius: 5px;
+}
+.modal-header-primary {
+    color:#fff;
+    padding:9px 15px;
+    border-bottom:1px solid #eee;
+    background-color: #428bca;
+    -webkit-border-top-left-radius: 5px;
+    -webkit-border-top-right-radius: 5px;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-topright: 5px;
+     border-top-left-radius: 5px;
+     border-top-right-radius: 5px;
+}

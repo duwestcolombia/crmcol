@@ -1,0 +1,10 @@
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^duwestcolombia\.com$
+RewriteCond %{REQUEST_URI} !^/[0-9]+\..+\.cpaneldcv$
+RewriteCond %{REQUEST_URI} !^/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^www\.duwestcolombia\.com$ "http://duwestcolombia.com" [R=301,L]
+
+
+RewriteCond %{HTTP_HOST} ^www.duwestcolombia.com [NC]
+RewriteRule ^(.*)$ http://duwestcolombia.com/$1 [L,R=301]
+

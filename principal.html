@@ -1,0 +1,72 @@
+<?php
+error_reporting(0);
+required 'php/conexionbd.php';
+$nuevadata = new Database();
+$op="*";
+if(isset($op))
+{
+	echo $op;
+}
+$statement = $nuevadata->prepare($nuevadata, 'SELECT * FROM rol');
+$statement ->execute();
+$resultado = $statement->fetchAll(); 
+print_r($resultado);
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/main.css">
+	<link href='https://fonts.googleapis.com/css?family=Lato:400,700italic,100italic,300' rel='stylesheet' type='text/css'>
+	<title>Ventas Duwest</title>
+	</head>
+<body>
+	
+		<nav class="se-gris padding-largo">
+			<ul class="no-lista text-right">
+				<li class="col-md-4 inline-block"><a href="acercade.html">Cerrar Sesion</a></li>
+			</ul>
+		</nav>	
+			
+			<h1 class="no-float ">Duwest Colombia S.A.S</h1><br>
+			
+		<section>
+			<div class="text-center">
+				<h1 class="grande">Reporte de Visitas</h1>
+				<nav>
+					<div class="col-md-3 inline-block">
+						<form action="php/validar.php" method="post" style="margin-top:1.5em;">
+		             	 <label for="idusuario">Usuario</label>
+		             	 <input type="text" name="txt_usuario" placeholder="Usuario" required="required" class="form-control"/><br/>
+		             	<label for="Nombres y Apellidos">Nombres y Apellidos</label>
+		             	<input type="text" name="txt_nomusuario" placeholder="Nombres y Apellidos" required="required" class="form-control"/><br/>
+		             	<label for="Tipo">Seleccione un Tipo de Usuario</label>
+		             	
+		             	<form action="php/llenarcombos.php">
+		             		<select name="lst_tipusuario" class="form-control">
+						  <option><? echo $comborol; ?></option>
+						  
+						  
+										
+						</select> 
+		             	</form>
+						
+
+		             	<label for="Nombres y Apellidos">Nombres y Apellidos</label>
+		             	<input type="text" name="txt_nomusuario" placeholder="Nombres y Apellidos" required="required" class="form-control"/><br/>
+		            	<input type="submit" value="Registrar"/>
+		             	</form>
+					</div>
+				</nav>
+			</div>
+		</section>
+
+
+
+
+
+</body>
+</html>			

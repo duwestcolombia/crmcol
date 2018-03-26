@@ -1,0 +1,85 @@
+		body{
+			font-family: font-family: 'Lato', sans-serif;
+			text-align: justify;
+
+		}
+
+		#tabcustomer table{
+			width: 30%;
+			text-align: center;
+			border-collapse:collapse;
+/*			border: none;*/
+		}
+		#tabcustomer th{
+			margin: 0;
+			padding: 0;
+			border: 1px solid;
+			background-color: green;
+			color: white;
+		}
+		#tabcustomer td{
+			border: 1px solid;
+		}
+
+		#tabparticipacion table{
+			width: 100%;
+			text-align: center;
+			border-collapse:collapse;
+		}
+		#tabparticipacion th{
+			margin: 0;
+			padding: 0;
+			border: 1px solid;
+			background-color: green;
+			color: white;
+
+		}
+		#tabparticipacion td{
+			border: 1px solid;
+		}
+
+		#tabcliente table{
+			width: 70%;
+			text-align: center;
+			border-collapse:collapse;
+		}
+		
+		#tabcliente th{
+			margin: 0;
+			padding: 0;
+			border: 1px solid;
+			background-color: green;
+			color: white;
+		}
+		#tabcliente td{
+			border: 1px solid;
+		}
+
+		#tabrpn table{
+			width: 100%;
+			text-align: center;
+			border-collapse:collapse;
+		}
+		#tabrpn th{
+			margin: 0;
+			padding: 0;
+			border: 1px solid;
+			background-color: green;
+			color: white;
+		}
+		#tabrpn td{
+			border: 1px solid;
+		}
+		#footer{
+			font-family: font-family: 'Lato', sans-serif;
+			font-size: 8pt;
+		}
+
+		.text-center{
+			text-align: center;
+		}
+		.table-border{
+			border:1px solid; 	
+		}
+
+

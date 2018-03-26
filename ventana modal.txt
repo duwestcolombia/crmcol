@@ -1,0 +1,30 @@
+<!-- /boton que llama ventana modal -->
+		<button class="btn btn-info" data-toggle="modal" data-target="#editusuario" >Editar Usuario</button>
+		<!-- /los 3 div son la estructura de la ventana modal -->
+		<div class="modal fade" id="editusuario" tabindex="-1" role="dialog" aria-labelledby="gridSystemModalLabel" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<!-- /encabezado ventana modal -->
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+						<h4>Datos del Cliente</h4>
+					</div>
+					<!-- /cuerpo ventana modal -->
+					<div class="modal-body">
+						
+							<?php
+							require 'php/editcliente.php';
+							
+							echo '<input type="text" value="'.$_SESSION['id'].'">';		
+
+							?>
+							
+
+					<!-- /Pie de Pagina ventana modal -->	
+					<div class="modal-footer">
+						<button tyrpe="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
+
+					</div>
+				</div>
+			</div>
+		</div>

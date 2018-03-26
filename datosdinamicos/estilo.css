@@ -1,0 +1,22 @@
+#inputs{
+	width: 250px; 
+	display: inline;
+}
+#enviar{
+	display: inline;
+}
+input {
+    border: solid 1px #ccc;
+    padding: 10px;
+    margin-bottom: 5px;
+    background: none;
+}
+.add{
+	padding: 8px;
+	background: none;
+	font-size: 1em;
+	color: #ddd;	
+	border:solid 1px #ddd;
+	outline: none;
+	margin-right: 5px;
+}
