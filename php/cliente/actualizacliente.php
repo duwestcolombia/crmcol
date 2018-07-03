@@ -99,8 +99,8 @@ $hoy=date("Y-m-d h:i:sa");
 
 $actcliente=$db ->query("UPDATE cliente SET nom_cliente='$nom', tipo_Cliente='$tip', division_cliente='$div' WHERE id_cliente='$id'" ) or die("Error Update Client: ".$db->error);
 
-$updatecliente=$dbaudi->query("UPDATE cliente SET nom_cliente='$nom', tipo_Cliente='$tip', tiporeg_cliente='M',division_cliente='$div',
-							freg_cliente='$hoy',usureg_cliente='$usu' WHERE id_cliente='$id'") or die("Error Client-Audi: ".$dbaudi->error);
+// $updatecliente=$dbaudi->query("UPDATE cliente SET nom_cliente='$nom', tipo_Cliente='$tip', tiporeg_cliente='M',division_cliente='$div',
+// 							freg_cliente='$hoy',usureg_cliente='$usu' WHERE id_cliente='$id'") or die("Error Client-Audi: ".$dbaudi->error);
 
 /*INSERTAR Y ACTUALIZAR CLIENTE MUNICIPIO------------------------------------------------------------------------------------------------*/
 $actclientemunicipio=$db->query("UPDATE cliente_municipio 
@@ -119,13 +119,13 @@ $actclientemunicipio=$db->query("UPDATE cliente_municipio
 	and id_usuario='$usu'
 	")or die("Error Update client-mun: ".$db->error);
 
-$Updateclientemun=$dbaudi->query("INSERT INTO cliente_municipio
-								(id_clientemunicipio,id_cliente,id_municipio,hect_cliente,hectsemb_cliente,tel_cliente,
-								fcumpleanos_cliente,email_cliente,direccion_cliente,vtotalcompras_cliente,vtotalcomprasnutri_cliente,
-								id_usuario,contacto_cliente, tiporeg_clientemunicipio, freg_clientemunicipio,usureg_clientemunicipio) 
+// $Updateclientemun=$dbaudi->query("INSERT INTO cliente_municipio
+// 								(id_clientemunicipio,id_cliente,id_municipio,hect_cliente,hectsemb_cliente,tel_cliente,
+// 								fcumpleanos_cliente,email_cliente,direccion_cliente,vtotalcompras_cliente,vtotalcomprasnutri_cliente,
+// 								id_usuario,contacto_cliente, tiporeg_clientemunicipio, freg_clientemunicipio,usureg_clientemunicipio) 
 								
-								VALUES(NULL,'$id','$muni','$hecta','$hectasem','$tel','$fcumple','$email','$dir','$totcomp','$totcompnutri','$usu',
-									'$ncontacto','M','$hoy','$usu')")or die("Error client-mun-Audi: ".$dbaudi->error);
+// 								VALUES(NULL,'$id','$muni','$hecta','$hectasem','$tel','$fcumple','$email','$dir','$totcomp','$totcompnutri','$usu',
+// 									'$ncontacto','M','$hoy','$usu')")or die("Error client-mun-Audi: ".$dbaudi->error);
 
 /*INSERTAR Y ACTUALIZAR CLIENTE CALIFICACION------------------------------------------------------------------------------------------*/
 $actcalifcliente=$db ->query("UPDATE cliente_calificacion 
@@ -143,13 +143,13 @@ $actcalifcliente=$db ->query("UPDATE cliente_calificacion
 	and id_usuario='$usu'
 	") or die("Error Update calif-cli: ".$db->error);
 
-$updatecalifcliente=$dbaudi->query("INSERT INTO cliente_calificacion(id_clientecalificacion,tamano_peconomico,crecimi_peconomico,
-									finanza_peconomico,compt_peconomico,total_peconomico,conoci_rpersonal,resp_rpersonal,
-									pps_rpersonal,actitud_rpersonal,total_rpersonal,id_cliente,id_usuario,tiporeg_clientecalif,
-									freg_clientecalif,usureg_clientecalif) 
-									VALUES(NULL,'$tamano','$crecimiento','$finanza','$compe','$totpecono',
-										'$cono','$responsab','$pps','$actitud','$totrpersonal','$id','$usu','M','$hoy',
-										'$usu')")or die("Error calif-cli-audi: ".$dbaudi->error);
+// $updatecalifcliente=$dbaudi->query("INSERT INTO cliente_calificacion(id_clientecalificacion,tamano_peconomico,crecimi_peconomico,
+// 									finanza_peconomico,compt_peconomico,total_peconomico,conoci_rpersonal,resp_rpersonal,
+// 									pps_rpersonal,actitud_rpersonal,total_rpersonal,id_cliente,id_usuario,tiporeg_clientecalif,
+// 									freg_clientecalif,usureg_clientecalif) 
+// 									VALUES(NULL,'$tamano','$crecimiento','$finanza','$compe','$totpecono',
+// 										'$cono','$responsab','$pps','$actitud','$totrpersonal','$id','$usu','M','$hoy',
+// 										'$usu')")or die("Error calif-cli-audi: ".$dbaudi->error);
 
 /*MOSTRAR MENSAJE DESPUES DE QUE TODO ESTE BIEN------------------------------------------------------------------------------------------*/
 

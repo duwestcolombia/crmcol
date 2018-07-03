@@ -10,17 +10,29 @@ require '../conexionbd.php';
 $id=$_POST['lst_tipusuario'];
 $usu=$_SESSION['usuario_sesion'];
 
+// $consulta=$db ->query("SELECT 
+// cm.id_cliente,c.nom_cliente,c.tipo_cliente,c.division_cliente,z.nom_zona, m.nom_municipio,cm.hect_cliente,
+// cm.hectsemb_cliente,cm.tel_cliente,cm.fcumpleanos_cliente,cm.email_cliente,cm.direccion_cliente,cm.vtotalcompras_cliente,cm.vtotalcomprasnutri_cliente,cm.contacto_cliente,
+// cz.id_zona,cm.id_municipio
+// FROM cliente_municipio cm, cliente c, zona z, municipio m, cliente_zona cz
+// WHERE c.id_cliente='$id'
+// and cm.id_cliente=c.id_cliente
+// and cm.id_usuario= '$usu'
+// and z.id_zona=cz.id_zona
+// and cz.id_cliente=c.id_cliente
+// and m.id_municipio=cm.id_municipio
+// GROUP BY c.id_cliente") or die($db->error);
 $consulta=$db ->query("SELECT 
 cm.id_cliente,c.nom_cliente,c.tipo_cliente,c.division_cliente,z.nom_zona, m.nom_municipio,cm.hect_cliente,
-cm.hectsemb_cliente,cm.tel_cliente,cm.fcumpleanos_cliente,cm.email_cliente,cm.direccion_cliente,cm.vtotalcompras_cliente,cm.vtotalcomprasnutri_cliente,cm.contacto_cliente,
-cz.id_zona,cm.id_municipio
-FROM cliente_municipio cm, cliente c, zona z, municipio m, cliente_zona cz
+cm.hectsemb_cliente,cm.tel_cliente,cm.fcumpleanos_cliente,cm.email_cliente,cm.direccion_cliente,
+cm.vtotalcompras_cliente,cm.vtotalcomprasnutri_cliente,
+cm.contacto_cliente,cm.id_municipio, z.id_zona
+FROM cliente_municipio cm, cliente c, zona z, municipio m
 WHERE c.id_cliente='$id'
 and cm.id_cliente=c.id_cliente
 and cm.id_usuario= '$usu'
-and z.id_zona=cz.id_zona
-and cz.id_cliente=c.id_cliente
 and m.id_municipio=cm.id_municipio
+and z.id_zona = m.id_zona
 GROUP BY c.id_cliente") or die($db->error);
 
 $consulzona=$db->query("SELECT * from zona GROUP BY id_zona") or die($db->error);
@@ -163,6 +175,7 @@ $nomenclatura = array(
 //$consulmunicipio=$db->query("SELECT * from municipio GROUP BY id_municipio") or die($db->error);
 while ($consultausu = $consulta ->fetch_array(MYSQLI_BOTH))
 {
+
 	//Cargo el Id de la zona que se encontro en la tabla cliente_zona
 	$zonauno=$consultausu['id_zona'];
 	$mununo=$consultausu['id_municipio'];

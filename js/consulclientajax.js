@@ -17,6 +17,8 @@ $.ajax({
 	data:{lst_tipusuario:id},
 
 	success:function(datos){
+
+		
 		$("#mostrardatos").html(datos);
 		document.getElementById('txtnombre').focus()
 		document.getElementById("txtzona").disabled=true;

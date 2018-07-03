@@ -7,6 +7,7 @@ if(!$_SESSION)
 // Incluimos nuestro archivo config
 include 'config.php'; 
 $usu=$_SESSION['usuario_sesion'];
+
 // Sentencia sql para traer los eventos desde la base de datos
 $sql="SELECT * FROM eventos WHERE id_usuario='$usu'"; 
 

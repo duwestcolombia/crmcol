@@ -168,16 +168,29 @@ if(!$_SESSION)
                             if (isset($_POST["buscar"])) 
                             {
                                 $tipcliente=$_POST['lst_tipcliente'];
-
+                                
 
                                 switch ($tipcliente) {
                                 case 1:
+                                $consultotal=$db->query("SELECT c.id_cliente, c.nom_cliente, c.tipo_cliente, 
+                                                                cc.total_peconomico,cc.total_rpersonal,
+                                                                cc.id_clientecalificacion 
+                                                            FROM cliente c, cliente_calificacion cc 
+                                                            Where c.id_cliente=cc.id_cliente 
+                                                            and cc.id_usuario='$usu' 
+                                                            GROUP BY cc.id_clientecalificacion")or die($db->error);
 
-                                $consultotal=$db->query("SELECT c.id_cliente, c.nom_cliente, c.tipo_cliente, cc.total_peconomico,cc.total_rpersonal,cc.id_clientecalificacion FROM cliente c, cliente_calificacion cc Where c.id_cliente=cc.id_cliente and cc.id_usuario='$usu' GROUP BY cc.id_clientecalificacion")or die($db->error);
-                                $tab=$db->query("SELECT c.id_cliente, c.nom_cliente, c.tipo_cliente, cc.total_peconomico,cc.total_rpersonal,cc.id_clientecalificacion FROM cliente c, cliente_calificacion cc Where c.id_cliente=cc.id_cliente and cc.id_usuario='$usu' GROUP BY cc.id_clientecalificacion")or die($db->error);
+                                $tab=$db->query("SELECT c.id_cliente, c.nom_cliente, c.tipo_cliente, 
+                                                        cc.total_peconomico,cc.total_rpersonal,
+                                                        cc.id_clientecalificacion 
+                                                    FROM cliente c, cliente_calificacion cc 
+                                                    Where c.id_cliente=cc.id_cliente 
+                                                    and cc.id_usuario='$usu' 
+                                                    GROUP BY cc.id_clientecalificacion")or die($db->error);
                                
                                 while ($resul = $consultotal ->fetch_array(MYSQLI_BOTH))
                                 {
+                                
                                     
                                     echo'{x:-'.$resul['total_rpersonal'].', y:'.$resul['total_peconomico'].',  name:"'.$resul['nom_cliente'].'",idCliente:"'.$resul['id_cliente'].'", tcliente:"'.$resul['tipo_cliente'].'"},';
 
@@ -334,6 +347,7 @@ if(!$_SESSION)
                 
             </div>
             <hr>
+         
             <div id="objectPrint">
             <div class="row">
                 <div class="col-md-8">
@@ -356,7 +370,7 @@ if(!$_SESSION)
                                         echo '
                                     <tr>
                                         <td>'.$resul['id_cliente'].'</td>
-                                        <td>'.$resul['nom_cliente'].'</td>
+                                        <td>'.utf8_encode( $resul['nom_cliente']).'</td>
                                         <td>'.$resul['total_peconomico'].'</td>
                                         <td>'.$resul['total_rpersonal'].'</td>
                                     </tr>';

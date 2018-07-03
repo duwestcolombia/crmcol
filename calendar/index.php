@@ -94,7 +94,7 @@ if (isset($_POST['from']))
             $hoy=date("Y-m-d h:i:sa");
             $regevento="INSERT INTO eventos VALUES(null,'$concatec','$cliente','$usu','$body','','$clase','$inicio','$final','$inicio_normal','$final_normal','R','$hoy','$usu')";
             //ejecuto conexion
-            $dbaudi->query($regevento)|| die($dbaudi->error);
+            // $dbaudi->query($regevento)|| die($dbaudi->error);
 
             // Obtenemos el ultimo id insetado
             $im=$conexion->query("SELECT MAX(id) AS id FROM eventos");
@@ -109,7 +109,7 @@ if (isset($_POST['from']))
 
             // Ejecutamos nuestra sentencia sql
             $conexion->query($query)|| die($conexion->error); 
-            $dbaudi->query($query)|| die($dbaudi->error);
+            // $dbaudi->query($query)|| die($dbaudi->error);
                 
 
             // redireccionamos a nuestro calendario
@@ -379,7 +379,8 @@ if (isset($_POST['from']))
                         }
                 };
 
-
+                
+                
                 // id del div donde se mostrara el calendario
                 var calendar = $('#calendar').calendar(options); 
 
