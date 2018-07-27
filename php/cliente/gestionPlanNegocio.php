@@ -182,7 +182,7 @@ echo'<form name="frmPlanNegocio" action="../php/cliente/adminPlanNegocio.php" me
 						
 
 						<br>
-						<input type="submit" class="btn btn-primary" name="insertar" value="Registrar" disabled/>
+						<input type="submit" class="btn btn-primary" name="insertar" value="Registrar" >
 
 					</form>';
  ?>

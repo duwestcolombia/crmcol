@@ -71,17 +71,17 @@ $consulCli=$db->query("SELECT c.id_cliente,c.nom_cliente,u.id_usuario,u.nom_usua
 <script type="text/javascript">
 
 
-	Push.create("Novedades en Plan de Negocio", {
-	    body: "La fecha para registrar los planes de negocio termino. Si tiene alguna duda por favor comuniquese con el area de sistemas",
-	    icon: '../img/logo.png',
-	    timeout: 5000,
+	// Push.create("Novedades en Plan de Negocio", {
+	//     body: "La fecha para registrar los planes de negocio termino. Si tiene alguna duda por favor comuniquese con el area de sistemas",
+	//     icon: '../img/logo.png',
+	//     timeout: 5000,
 
-	    onClick: function () {
+	//     onClick: function () {
 	       
-	        this.close();
-	    }
+	//         this.close();
+	//     }
 	    
-	});
+	// });
 	
 </script>
 <body onload="nobackbutton();">

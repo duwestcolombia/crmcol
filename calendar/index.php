@@ -141,10 +141,10 @@ if (isset($_POST['from']))
 
                 //INSERTAR EVENTO DENTRO DE LA BASE DE DATOS DE AUDITORIA
                 //sacar fecha y hora actual
-                $hoy=date("Y-m-d h:i:sa");
-                $regevento="INSERT INTO eventos VALUES(null,'$concatec','$cliente','$usu','$body','','$clase','$iniRep','$finRep','$i','$ff','R','$hoy','$usu')";
-                //ejecuto conexion
-                $dbaudi->query($regevento)|| die($dbaudi->error);
+                // $hoy=date("Y-m-d h:i:sa");
+                // $regevento="INSERT INTO eventos VALUES(null,'$concatec','$cliente','$usu','$body','','$clase','$iniRep','$finRep','$i','$ff','R','$hoy','$usu')";
+                // //ejecuto conexion
+                // $dbaudi->query($regevento)|| die($dbaudi->error);
 
                 // Obtenemos el ultimo id insertado
                 $im=$conexion->query("SELECT MAX(id) AS id FROM eventos");

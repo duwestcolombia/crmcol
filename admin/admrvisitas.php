@@ -16,35 +16,38 @@ require '../php/conexionbd.php';
 $usu=$_SESSION['usuario_sesion'];
 $rol=$_SESSION['tipusuario_sesion'];
 $zon=$_SESSION['zona_sesion'];
+var_dump($usu);
 
 ////////////////////CONSULTAS PARA TABLA Y PARA COMBOBOX////////////////////////
-	switch ($rol) {
-	case 1:
+// 	switch ($rol) {
+// 	case 1:
 
-	$resultadousuario=$db->query("SELECT * FROM usuario WHERE id_usuario<>'$usu' and id_rol<>'2' ORDER BY nom_usuario ASC") or die($db->error);
+// 	$resultadousuario=$db->query("SELECT * FROM usuario WHERE id_usuario<>'$usu' and id_rol<>'2' ORDER BY nom_usuario ASC") or die($db->error);
 
-	break;
-	case 2:
-	//Consulta para los lideres con 1 Zona
+// 	break;
+// 	case 2:
+// 	//Consulta para los lideres con 1 Zona
 
-	$resultadousuario=$db->query("SELECT * FROM usuario WHERE id_zona='$zon' and id_usuario<>'$usu' and sector_usuario<>'Administrador' and sector_usuario<>'Flores' ORDER BY nom_usuario ASC") or die($db->error);
-	break;
-	case 3:
-	//Consulta para el lider Periferia cundinamarca y Periferia Boyaca.
+// 	$resultadousuario=$db->query("SELECT * FROM usuario WHERE id_zona='$zon' and id_usuario<>'$usu' and sector_usuario<>'Administrador' and sector_usuario<>'Flores' ORDER BY nom_usuario ASC") or die($db->error);
+// 	break;
+// 	case 3:
+// 	//Consulta para el lider Periferia cundinamarca y Periferia Boyaca.
 
-	$resultadousuario=$db->query("SELECT * FROM usuario WHERE id_zona>='2'and id_zona<='3' and id_usuario<>'$usu' and sector_usuario<>'Flores' ORDER BY nom_usuario ASC") or die($db->error);
-	break;
-	case 4:
-	//Consulta Para el Lider de Flores Sabana y flores Antioquia.
+// 	$resultadousuario=$db->query("SELECT * FROM usuario WHERE id_zona>='2'and id_zona<='3' and id_usuario<>'$usu' and sector_usuario<>'Flores' ORDER BY nom_usuario ASC") or die($db->error);
+// 	break;
+// 	case 4:
+// 	//Consulta Para el Lider de Flores Sabana y flores Antioquia.
 
-	$resultadousuario=$db->query("SELECT * FROM usuario WHERE id_zona>='1'and id_zona<='3' and id_usuario<>'$usu' and sector_usuario<>'Periferia' ORDER BY nom_usuario ASC") or die($db->error);
-	break;
-	case 5:
-		//Consulta Para el Lider de Nariño, Cauca y Huila.
+// 	$resultadousuario=$db->query("SELECT * FROM usuario WHERE id_zona>='1'and id_zona<='3' and id_usuario<>'$usu' and sector_usuario<>'Periferia' ORDER BY nom_usuario ASC") or die($db->error);
+// 	break;
+// 	case 5:
+// 		//Consulta Para el Lider de Nariño, Cauca y Huila.
 
-	$resultadousuario=$db->query("SELECT * FROM usuario WHERE id_zona>='5'and id_zona<='7' and id_usuario<>'$usu' ORDER BY nom_usuario ASC") or die($db->error);
-	break;
-}
+// 	$resultadousuario=$db->query("SELECT * FROM usuario WHERE id_zona>='5'and id_zona<='7' and id_usuario<>'$usu' ORDER BY nom_usuario ASC") or die($db->error);
+// 	break;
+// }
+
+	$resultadousuario = $db->query("SELECT * FROM usuario WHERE jefe_usuario='$usu'") or die($db->error);
 
 
 ?>

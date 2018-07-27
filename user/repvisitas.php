@@ -180,26 +180,25 @@ $(document).ready(function(){
 });
 
 function idCliente(){
-
-	var num =  document.getElementById("lst_cliente").value; 
-	if (num >= 1) 
+	console.log(document.getElementById("lst_cliente").value);
+	
+	var num =  document.getElementById("lst_cliente").value;
+	console.log(num.length);
+	 
+	if (num.length < 8) 
 	{
-		if (num <= 10) 
-		{
+		
 			
 			document.getElementById("nomEsporadico").disabled=false;
 			document.getElementById("txtsitzona").value="NA";
 			document.getElementById("txtcompetencia").value="NA"; 
-		}
-		else
-		{
-			document.getElementById("nomEsporadico").disabled=true;	
-		}
-		 
+				 
 	}
 	else
 	{
 		document.getElementById("nomEsporadico").disabled=true;
+		document.getElementById("txtsitzona").value="";
+		document.getElementById("txtcompetencia").value=""; 
 	}
 	
 

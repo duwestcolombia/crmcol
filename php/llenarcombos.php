@@ -7,7 +7,7 @@ $usuconsulta=$_POST['usuario'];
 //echo $usuconsulta;
 
 if ($usuconsulta!=null) {
-	$resultado=$db->query("SELECT cm.id_cliente, cm.id_usuario ,c.nom_cliente 
+	$resultado=$db->query("SELECT cm.id_cliente,c.cod_cliente, cm.id_usuario ,c.nom_cliente 
 		FROM 
 		cliente c, cliente_municipio cm 
 		WHERE
@@ -27,7 +27,7 @@ else
 {
 /*if($usu!=null)
 {*/
-$resultado=$db->query("SELECT cm.id_cliente, cm.id_usuario ,c.nom_cliente 
+$resultado=$db->query("SELECT cm.id_cliente,c.cod_cliente, cm.id_usuario ,c.nom_cliente 
 	FROM 
 	cliente c, cliente_municipio cm 
 	WHERE

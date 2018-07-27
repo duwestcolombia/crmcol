@@ -21,34 +21,34 @@ $ifinal=date('d-m-y',strtotime($ffin));
 //echo '<script>alert("Usuario seleccionado : '.date('d-m-y',strtotime($finicio)).'")</script>';
 
 ////////////////////CONSULTAS PARA TABLA Y PARA COMBOBOX////////////////////////
-switch ($rol) {
-	case 1:
-	///////////////PRUEBA DE BOTON BUSCAR TODO/////////////////////////
+// switch ($rol) {
+// 	case 1:
+// 	///////////////PRUEBA DE BOTON BUSCAR TODO/////////////////////////
 	
 
-	$resultadousuario=$db->query("SELECT * FROM usuario WHERE id_usuario<>'$usu' and id_rol<>'2'") or die($db->error);
+// 	$resultadousuario=$db->query("SELECT * FROM usuario WHERE id_usuario<>'$usu' and id_rol<>'2'") or die($db->error);
 
-		//echo '<script>alert("Usuario seleccionado : '.$usuconsulta.'")</script>';
+// 		//echo '<script>alert("Usuario seleccionado : '.$usuconsulta.'")</script>';
 	
-	break;
-	case 2:
+// 	break;
+// 	case 2:
 
-	$resultadousuario=$db->query("SELECT * FROM usuario WHERE id_zona='$zon' and id_usuario<>'$usu' and sector_usuario<>'Administrador' and sector_usuario<>'Flores' ORDER BY nom_usuario ASC") or die($db->error);
-	break;
-	case 3:
+// 	$resultadousuario=$db->query("SELECT * FROM usuario WHERE id_zona='$zon' and id_usuario<>'$usu' and sector_usuario<>'Administrador' and sector_usuario<>'Flores' ORDER BY nom_usuario ASC") or die($db->error);
+// 	break;
+// 	case 3:
 
-	$resultadousuario=$db->query("SELECT * FROM usuario WHERE id_zona>='2'and id_zona<='3' and id_usuario<>'$usu' and sector_usuario<>'Flores'") or die($db->error);
-	break;
-	case 4:
+// 	$resultadousuario=$db->query("SELECT * FROM usuario WHERE id_zona>='2'and id_zona<='3' and id_usuario<>'$usu' and sector_usuario<>'Flores'") or die($db->error);
+// 	break;
+// 	case 4:
 
-	$resultadousuario=$db->query("SELECT * FROM usuario WHERE id_zona>='1'and id_zona<='3' and id_usuario<>'$usu' and sector_usuario<>'Periferia'") or die($db->error);
-	break;
-	case 5:
+// 	$resultadousuario=$db->query("SELECT * FROM usuario WHERE id_zona>='1'and id_zona<='3' and id_usuario<>'$usu' and sector_usuario<>'Periferia'") or die($db->error);
+// 	break;
+// 	case 5:
 
-	$resultadousuario=$db->query("SELECT * FROM usuario WHERE id_zona>='5'and id_zona<='7' and id_usuario<>'$usu'") or die($db->error);
-	break;
-}
-
+// 	$resultadousuario=$db->query("SELECT * FROM usuario WHERE id_zona>='5'and id_zona<='7' and id_usuario<>'$usu'") or die($db->error);
+// 	break;
+// }
+$resultadousuario = $db->query("SELECT * FROM usuario WHERE jefe_usuario='$usu'") or die($db->error);
 
 ?>
 <!DOCTYPE html>

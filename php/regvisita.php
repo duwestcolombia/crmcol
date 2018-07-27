@@ -25,9 +25,13 @@ if (!empty($cliente)) {//Si contiene un valor, entra aqui
 				if (!empty($rvisita)) {
 
 					#Insertar datos a través de la sentencia INSERT
+					
+				
 					$insertar = "INSERT INTO visita(id_visita, fecha_visita, sitzona_visita, sitcompetencia_visita, rvisita_visita,id_usuario, id_cliente,nomesporadico_visita)
 					VALUES(NULL, '$fvisita', '$sitzona', '$scompetencia', '$rvisita', '$usuario', '$cliente','$esporadico')";
+					
 					$resultado = $db -> query($insertar)|| die($db->error);
+					
 
 					/*$insertauditoria="INSERT INTO visita(id_visita, fecha_visita, sitzona_visita, sitcompetencia_visita, rvisita_visita,id_usuario, id_cliente,nomesporadico_visita, tiporeg_visita, freg_visita, usureg_visita) 
 						VALUES(NULL, '$fvisita', '$sitzona','$scompetencia', '$rvisita', '$usuario','$cliente','$esporadico','R','$hoy','$usu')";
